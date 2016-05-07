@@ -1,2 +1,23 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Tag an image</h1>
+
+<%= form_tag "/", method: "get" do %>
+  <%= label_tag(:image_url, "Image URL:") %>
+  <%= text_field_tag(:image_url) %>
+  <%= submit_tag("Tag it!") %>
+<% end %>
+
+<br />
+
+<%# Display the image that was given %>
+<div class="image_wrapper">
+  <%= image_tag @image_url if @image_url %>
+</div>
+
+<%# Loop over the list that of words and display them in their own list item %>
+<ul class="tags_list">
+  <% if @tags %>
+    <% @tags.each do |tag| %>
+      <li><span><%= tag %></span></li>
+    <% end %>
+  <% end %>
+</ul>

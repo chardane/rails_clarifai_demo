@@ -1,3 +1,31 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.image_wrapper {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.image_wrapper img {
+  max-width: 100%;
+  margin: auto;
+}
+
+.tags_list {
+  display: inline-block;
+  width: 40%;
+  list-style-type: none;
+  vertical-align: top;
+}
+
+.tags_list li {
+  margin: 10px 2px;
+  display: inline-block;
+}
+
+.tags_list li span {
+  background-color: rgba(0,0,0,0.04);
+  padding: 5px;
+  border-radius: 5px;
+}
